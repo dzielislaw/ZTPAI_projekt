@@ -1,0 +1,122 @@
+html{
+    width: auto;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg,  rgba(0, 18, 66, 0.65) 44%, rgba(0, 18, 66, 0.71) 99%);
+}
+
+#container_smartphoneSignUp{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#bannerSignUp{
+    width: 100%;
+    height: 17%;
+    text-align: center;
+    display: flex;
+}
+
+#bannerSignUp h1{
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 4em;
+    vertical-align: center;
+    margin: auto;
+}
+
+#logoSignUp{
+    width: auto;
+    height: 18vh;
+    margin:auto;
+    display: flex;
+}
+
+#logoSignUp img{
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+
+#main_contentSignUp{
+    width: auto;
+    height:58%;
+    margin:auto;
+    display: flex;
+}
+
+#main_contentSignUp form{
+    width: auto;
+    min-width: 60%;
+    height: 100%;
+    margin:auto;
+    padding: 1% 1%;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width:80%;
+    height: 12%;
+    margin: 1% auto;
+    padding: 1% 0;
+    font-size: 1.5em;
+    text-align: center;
+    border-radius: 1em;
+}
+
+#registerButtonSignUp{
+    background-color: whitesmoke;
+    transition: background-color 560ms ease-in-out;
+}
+
+#registerButtonSignUp:hover{
+    cursor: pointer;
+    background-color: darkorange;
+}
+
+label{
+    width: 80%;
+    margin: 0.1% auto;
+    padding: 0 1%;
+    color:whitesmoke;
+    font-size: large;
+}
+
+#agreementCheckboxSignUp{
+    margin-left: 0.5em;
+    width: auto;
+    height: auto;
+}
+
+#footerSignUp{
+    width: auto;
+    height: 7%;
+    display: flex;
+    margin: auto;
+}
+
+#footerSignUp p{
+    font-size: x-large;
+    text-align: center;
+    color: whitesmoke;
+    vertical-align: top;
+    margin: auto;
+}
+
+.no-valid{
+    border: 0.2em solid rgb(224, 0, 0);
+}
