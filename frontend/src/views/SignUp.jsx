@@ -19,10 +19,10 @@ const Page404 = () => {
                     <input type="password" name="password" id="password" placeholder="hasło" />
                     <input type="password" name="confirmedPassword" id="password" placeholder="powtórz hasło" />
                     <label>
-                        <input type="checkbox" id="agreementCheckbox" name="agreementCheckbox" value="Terms accepted"/>
+                        <input type="checkbox" id="agreementCheckboxSignUp" name="agreementCheckbox" value="Terms accepted"/>
                         Akceptuję warunki korzystania z serwisu
                     </label>
-                    <input className="userInput" id="registerButton" type="submit" value="Załóż konto" />
+                    <input className="userInputSignUp" id="registerButton" type="submit" value="Załóż konto" />
                 </form>
             </div>
             <div id="footerSignUp">

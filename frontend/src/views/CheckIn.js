@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../css/Check.css';
 const CheckIn = () => {
     return (
         <div id="container">
@@ -9,10 +9,10 @@ const CheckIn = () => {
                 </div>
                 <div id="buttonArea">
                     <form className="banner_form" action="dashboard">
-                        <button className="userButton">Moje konto</button>
+                        <button className="userButtonCheck">Moje konto</button>
                     </form>
                     <form className="banner_form" action="/logout" method="GET">
-                        <button className="userButton">Wyloguj</button>
+                        <button className="userButtonCheck">Wyloguj</button>
                     </form>
                 </div>
             </div>

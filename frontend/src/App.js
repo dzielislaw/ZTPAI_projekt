@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import favicon from './img/favicon.ico';
 import './App.css';
 import React from "react";
 import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
@@ -9,6 +9,8 @@ import CheckOut from "./views/CheckOut";
 import UserAccount from "./views/UserAccount";
 import LogIn from "./views/LogIn";
 import SignUp from "./views/SignUp";
+import WorkerAccount from "./views/WokerAccount";
+import AddTool from "./views/AddTool";
 
 function App() {
     return(
@@ -18,7 +20,9 @@ function App() {
                 <Route path="checkIn" element={<CheckIn />} />
                 <Route path="checkOut" element={<CheckOut />} />
                 <Route path="myAccount" element={<UserAccount />} />
+                <Route path="workerAccount" element={<WorkerAccount />} />
                 <Route path="logIn" element={<LogIn />} />
+                <Route path="addTool" element={<AddTool />} />
                 {/*<Route path="logOut" element={<LogOut />} />*/}
                 <Route path="tool/:id" element={<Tools />} />
                 <Route path="*" element={<Page404 />} />

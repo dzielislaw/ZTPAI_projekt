@@ -108,8 +108,8 @@ body{
 
 .userButton{
     width: 80%;
-    height: 21.53%;
-    margin: 1%;
+    height: 15%;
+    margin: 0.35em;
     padding: 3% 1%;
     font-size: 2em;
     text-align: center;
