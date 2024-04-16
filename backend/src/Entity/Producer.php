@@ -6,6 +6,7 @@ use App\Repository\ProducerRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Attribute\Ignore;
 
 #[ORM\Entity(repositoryClass: ProducerRepository::class)]
 class Producer
@@ -19,6 +20,7 @@ class Producer
     private ?string $name = null;
 
     #[ORM\OneToMany(targetEntity: Tool::class, mappedBy: 'producer')]
+    #[Ignore]
     private Collection $tools;
 
     public function __construct()

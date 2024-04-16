@@ -7,7 +7,7 @@ const UserAccount = () => {
         <div id="containerUserAccount">
             <div id="bannerUserAccount">
                 <div id="UserAccount">
-                    <h1>Sprzęt-apka</h1>
+                    <h1>Bud-apka</h1>
                 </div>
                 <div id="buttonAreaUserAccount">
                     <form className="banner_formUserAccount">
@@ -40,7 +40,7 @@ const UserAccount = () => {
                 </div>
             </div>
             <div id="footerUserAccount">
-                <p>Contact details admin@sampleRentCompany.test.local &copy 2023</p>
+                <p>Contact details admin@sampleRentCompany.test.local &copy 2024</p>
             </div>
         </div>
     )

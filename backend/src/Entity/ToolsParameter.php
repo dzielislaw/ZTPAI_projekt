@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\ToolsParameterRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Attribute\Ignore;
 
 #[ORM\Entity(repositoryClass: ToolsParameterRepository::class)]
 class ToolsParameter
@@ -25,6 +26,7 @@ class ToolsParameter
     private ?Parameter $parameter = null;
 
     #[ORM\ManyToOne(inversedBy: 'properties')]
+    #[Ignore]
     private ?Tool $tool = null;
 
     public function getId(): ?int

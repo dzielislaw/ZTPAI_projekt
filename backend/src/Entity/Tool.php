@@ -25,7 +25,7 @@ class Tool
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $imgPath = null;
 
-    #[ORM\ManyToOne(inversedBy: 'tools')]
+    #[ORM\ManyToOne(fetch: 'EAGER', inversedBy: 'tools')]
     #[ORM\JoinColumn(nullable: false)]
     private ?Producer $producer = null;
 

@@ -6,6 +6,7 @@ use App\Repository\ToolInstanceRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Attribute\Ignore;
 
 #[ORM\Entity(repositoryClass: ToolInstanceRepository::class)]
 class ToolInstance
@@ -17,6 +18,7 @@ class ToolInstance
 
     #[ORM\ManyToOne(inversedBy: 'toolInstances')]
     #[ORM\JoinColumn(nullable: false)]
+    #[Ignore]
     private ?Tool $tool = null;
 
     #[ORM\Column(length: 64)]
@@ -26,6 +28,7 @@ class ToolInstance
     private ?string $notes = null;
 
     #[ORM\OneToMany(targetEntity: Rental::class, mappedBy: 'toolInstance')]
+    #[Ignore]
     private Collection $rentals;
 
     public function __construct()

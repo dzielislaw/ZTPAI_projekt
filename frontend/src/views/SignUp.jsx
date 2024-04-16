@@ -26,7 +26,7 @@ const Page404 = () => {
                 </form>
             </div>
             <div id="footerSignUp">
-                <p>Contact details admin@sampleRentCompany.test.local &copy 2023</p>
+                <p>Contact details admin@sampleRentCompany.test.local &copy 2024</p>
             </div>
         </div>
     )

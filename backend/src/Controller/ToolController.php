@@ -2,17 +2,22 @@
 
 namespace App\Controller;
 
+use App\Entity\Tool;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
 class ToolController extends AbstractController
 {
-    #[Route('/tool', name: 'app_tool', methods: 'GET')]
-    public function index(): Response
+    #[Route('/api/tool/{id}', name: 'app_tool', methods: 'GET')]
+    public function index(EntityManagerInterface $entityManager, $id): Response
     {
-        return $this->render('tool/index.html.twig', [
-            'controller_name' => 'ToolController',
-        ]);
+        $tool = $entityManager->getRepository(Tool::class)->find($id);
+
+        return $this->json(
+            $tool,
+            headers: ['Content-Type:' => 'application/json;charset=UTF-8']
+        );
     }
 }

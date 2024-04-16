@@ -43,7 +43,7 @@ const AddTool = () => {
                 </form>
             </div>
             <div id="footer">
-                <p>Contact details admin@sampleRentCompany.test.local &copy 2023</p>
+                <p>Contact details admin@sampleRentCompany.test.local &copy 2024</p>
             </div>
         </div>
 );

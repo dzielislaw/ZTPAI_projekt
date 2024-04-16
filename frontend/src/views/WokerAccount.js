@@ -24,12 +24,12 @@ const WorkerAccount = () => {
             <form className="workerForm" action="/checkOut">
                 <input type = "submit" value="Wydawanie sprzętu" />
             </form>
-            <form className="workerForm" action="/addEquipment">
+            <form className="workerForm" action="/addTool">
                 <input type="submit" value="Dodawanie sprzętu" />
             </form>
         </div>
         <div id="footerWorkerAccount">
-            <p>Contact details admin@sampleRentCompany.test.local &copy 2023</p>
+            <p>Contact details admin@sampleRentCompany.test.local &copy 2024</p>
         </div>
     </div>
     );

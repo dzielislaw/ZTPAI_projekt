@@ -176,6 +176,8 @@ body{
 button{
     background-color: whitesmoke;
     transition: background-color 560ms ease-in-out;
+    padding: 0.3em;
+    margin: 0.4em;
 }
 
 button:hover{

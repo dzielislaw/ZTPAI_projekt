@@ -23,7 +23,10 @@ const LogIn = () => {
                     <input className="userButton" type="password" name="password" placeholder="hasło"/> <br/>
                     <input id="loginButton" type="submit" value="Zaloguj"/>
                 </form>
-                <a href="./register">
+                <a href="/resetPassword">
+                    <button type="button">Resetuj hasło</button>
+                </a>
+                <a href="./signUp">
                     <button id="registerButton">Nie masz konta? Zarejestruj się</button>
                 </a>
             </div>
