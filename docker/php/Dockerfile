@@ -41,6 +41,9 @@ RUN composer require symfony/orm-pack
 RUN composer require --dev symfony/maker-bundle
 RUN composer require symfony/security-bundle
 RUN composer require lexik/jwt-authentication-bundle
+RUN composer require api-platform/core
+RUN composer require api-platform/api-pack
+RUN composer require nelmio/cors-bundle
 
 COPY ./backend/. /var/www/backend
 

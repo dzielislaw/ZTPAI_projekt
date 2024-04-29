@@ -10,14 +10,14 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class ToolController extends AbstractController
 {
-    #[Route('/api/tool/{id}', name: 'app_tool', methods: 'GET')]
-    public function index(EntityManagerInterface $entityManager, $id): Response
-    {
-        $tool = $entityManager->getRepository(Tool::class)->find($id);
-
-        return $this->json(
-            $tool,
-            headers: ['Content-Type:' => 'application/json;charset=UTF-8']
-        );
-    }
+//    #[Route('/api/tool/{id}', name: 'app_tool', methods: 'GET')]
+//    public function index(EntityManagerInterface $entityManager, $id): Response
+//    {
+//        $tool = $entityManager->getRepository(Tool::class)->find($id);
+//
+//        return $this->json(
+//            $tool,
+//            headers: ['Content-Type:' => 'application/json;charset=UTF-8']
+//        );
+//    }
 }

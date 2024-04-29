@@ -1,4 +1,4 @@
-FROM nginx:1.25.3-alpine
+FROM nginx:1.25.5-alpine
 COPY ./backend/. /var/www/backend
 
 COPY ./docker/nginx/nginx.conf /etc/nginx/conf.d/default.conf
