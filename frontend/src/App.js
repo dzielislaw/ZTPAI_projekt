@@ -11,6 +11,7 @@ import LogIn from "./views/LogIn";
 import SignUp from "./views/SignUp";
 import WorkerAccount from "./views/WokerAccount";
 import AddTool from "./views/AddTool";
+import LogOut from "./components/LogOut";
 
 function App() {
     return(
@@ -23,6 +24,7 @@ function App() {
                 <Route path="workerAccount" element={<WorkerAccount />} />
                 <Route path="logIn" element={<LogIn />} />
                 <Route path="addTool" element={<AddTool />} />
+                <Route path="logOut" element={<LogOut />} />
                 <Route path="/" element={<LogIn />} />
                 {/*<Route path="logOut" element={<LogOut />} />*/}
                 <Route path="tool/:id" element={<Tools />} />

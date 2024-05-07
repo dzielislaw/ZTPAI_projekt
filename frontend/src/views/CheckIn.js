@@ -11,7 +11,7 @@ const CheckIn = () => {
                     <form className="banner_form" action="dashboard">
                         <button className="userButtonCheck">Moje konto</button>
                     </form>
-                    <form className="banner_form" action="/logout" method="GET">
+                    <form className="banner_form" action="/frontend/src/components/logout" method="GET">
                         <button className="userButtonCheck">Wyloguj</button>
                     </form>
                 </div>

@@ -12,7 +12,7 @@ const WorkerAccount = () => {
                     <form className="banner_formWorkerAccount" action="/dashboard">
                         <button className="userButtonWorkerAccount">Moje konto</button>
                     </form>
-                    <form className= "banner_formWorkerAccount" action="/logout" method="GET">
+                    <form className= "banner_formWorkerAccount" action="/frontend/src/components/logout" method="GET">
                         <button className="userButtonWorkerAccount">Wyloguj</button>
                     </form>
                 </div>
