@@ -2,6 +2,9 @@ import React from 'react';
 import mis from '../img/mis.jpg';
 import '../css/WorkerAccount.css';
 const WorkerAccount = () => {
+    if(!localStorage.getItem('jwt-token')){
+        window.location.href = '/login';
+    }
     return (
         <div id="containerWorkerAccount">
             <div id="bannerWorkerAccount">

@@ -53,7 +53,7 @@ const LogIn = () => {
             <div id="rightLogIn" className="flex-column-center-center">
                 <form onSubmit={handleSubmit(onSubmit)} className="flex-column-center-center">
                     <div id="messages">
-                        {errorMessage && <div>{errorMessage}</div>}
+                        {errorMessage}
                     </div>
                     <input className="userButton" type="email" name="email" placeholder="email" {...register('email')} /> <br />
                     <input className="userButton" type="password" name="password" placeholder="hasło" {...register('password')} /> <br />

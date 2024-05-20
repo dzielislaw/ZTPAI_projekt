@@ -8,6 +8,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Attribute\Ignore;
 
 #[ORM\Entity(repositoryClass: ToolRepository::class)]
 #[ApiResource]
@@ -38,6 +39,7 @@ class Tool
     private Collection $properties;
 
     #[ORM\OneToMany(targetEntity: ToolInstance::class, mappedBy: 'tool', orphanRemoval: true)]
+    #[Ignore]
     private Collection $toolInstances;
 
     public function __construct()

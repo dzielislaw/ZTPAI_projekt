@@ -20,7 +20,6 @@ class ToolInstance
 
     #[ORM\ManyToOne(inversedBy: 'toolInstances')]
     #[ORM\JoinColumn(nullable: false)]
-    #[Ignore]
     private ?Tool $tool = null;
 
     #[ORM\Column(length: 64)]

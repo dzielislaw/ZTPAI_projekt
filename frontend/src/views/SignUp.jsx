@@ -2,8 +2,10 @@ import React from 'react';
 import logo from '../img/logo.png';
 import '../css/SignUp.css';
 import {useForm} from "react-hook-form";
+import {useNavigate} from "react-router-dom";
 const SignUp = () => {
     const { register, handleSubmit } = useForm();
+    const navigate = useNavigate();
     const onRegisterFormSubmit = async (data) => {
         try {
             const response = await fetch('http://127.0.0.1:80/api/users', {
@@ -28,6 +30,7 @@ const SignUp = () => {
             if (response.ok) {
                 console.log('register successful');
                 console.log(response);
+                navigate('/logIn');
             } else {
                 console.error('Register failed:', response.status);
             }

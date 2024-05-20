@@ -1,7 +1,11 @@
 import React from 'react';
 import logo from '../img/logo.png'
 import '../css/AddTool.css';
+import {useNavigate} from "react-router-dom";
 const AddTool = () => {
+    if(!localStorage.getItem('jwt-token')){
+        window.location.href = '/login';
+    }
     return (
         <div id="container">
             <div id="banner">

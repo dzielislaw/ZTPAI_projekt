@@ -7,6 +7,9 @@ import axios from 'axios';
 import {useNavigate} from "react-router-dom";
 
 const UserAccount = () => {
+    if(!localStorage.getItem('jwt-token')){
+        window.location.href = '/login';
+    }
     const [categories, setCategories] = useState([]);
 
     const LogOut = () => {
@@ -54,7 +57,7 @@ const UserAccount = () => {
                 </div>
             </div>
             <div id="leftUserAccount">
-                <h1>Sprzęt-apka</h1>
+                <h1>Bud-apka</h1>
                 <img src={logo} alt="logo" />
             </div>
             <div id="rightUserAccount">

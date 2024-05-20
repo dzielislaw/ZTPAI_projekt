@@ -1,6 +1,9 @@
 import React from 'react';
 import '../css/Check.css';
 const CheckOut = () => {
+    if(!localStorage.getItem('jwt-token')){
+        window.location.href = '/login';
+    }
     return (
         <div id="container">
             <div id="banner">
