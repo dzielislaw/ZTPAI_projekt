@@ -28,12 +28,19 @@ RUN apk add --no-cache --virtual .build-deps $BUILD_DEPS \
     && docker-php-ext-install -j "$(nproc)" $PHP_EXTENSIONS \
     && apk del .build-deps
 
+RUN apk add --no-cache rabbitmq-c-dev
+RUN apk add --no-cache autoconf
+RUN apk add --no-cache clang
+RUN apk add --no-cache make
+RUN apk add --no-cache sudo
+RUN pecl install amqp && docker-php-ext-enable amqp
+
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 
 #symphony CLI
 RUN apk add --no-cache bash
-RUN curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.alpine.sh' | bash
-RUN apk add symfony-cli
+#RUN curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.alpine.sh' | distro=alpine version=3.20 codename= sudo -E bash
+#RUN apk add symfony-cli
 
 RUN apk add --no-cache --virtual .run-deps $RUN_DEPS
 
@@ -44,6 +51,7 @@ RUN composer require lexik/jwt-authentication-bundle
 RUN composer require api-platform/core
 RUN composer require api-platform/api-pack
 RUN composer require nelmio/cors-bundle
+RUN composer require symfony/amqp-messenger
 
 COPY ./backend/. /var/www/backend
 

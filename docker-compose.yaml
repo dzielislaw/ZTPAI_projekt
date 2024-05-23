@@ -54,16 +54,26 @@ services:
     networks:
       - pg-network
 
-#  node:
-#    build:
-#      context: .
-#      dockerfile: docker/node/Dockerfile
-#    ports:
-#      - "3000:3000"
-#    volumes:
-#      - ./frontend:/var/www/frontend
-#    networks:
-#      - nginx
+  rabbitmq:
+    build:
+      context: .
+      dockerfile: docker/rabbitmq/Dockerfile
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - nginx
+
+  node:
+    build:
+      context: .
+      dockerfile: docker/node/Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/var/www/frontend
+    networks:
+      - nginx
 
 networks:
   pg-network:

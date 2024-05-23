@@ -1,4 +1,4 @@
-FROM node:21
+FROM node:22
 
 COPY ./frontend/public /var/www/frontend/public
 COPY ./frontend/src /var/www/frontend/src
