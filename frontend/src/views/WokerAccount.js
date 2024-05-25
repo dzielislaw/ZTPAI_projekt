@@ -1,10 +1,18 @@
 import React from 'react';
 import mis from '../img/mis.jpg';
 import '../css/WorkerAccount.css';
+import {useNavigate} from "react-router-dom";
 const WorkerAccount = () => {
     if(!localStorage.getItem('jwt-token')){
         window.location.href = '/login';
     }
+    const LogOut = () => {
+        const navigate = useNavigate();
+        if(localStorage.getItem('jwt-token') !== null) {
+            localStorage.removeItem('jwt-token');
+        }
+        navigate('/login');
+    };
     return (
         <div id="containerWorkerAccount">
             <div id="bannerWorkerAccount">
@@ -12,10 +20,10 @@ const WorkerAccount = () => {
                     <h1>Dzień dobry Jan!</h1>
                 </div>
                 <div id="buttonAreaWorkerAccount">
-                    <form className="banner_formWorkerAccount" action="/dashboard">
+                    <form className="banner_formWorkerAccount" action="/workerAccount">
                         <button className="userButtonWorkerAccount">Moje konto</button>
                     </form>
-                    <form className= "banner_formWorkerAccount" action="/frontend/src/components/logout" method="GET">
+                    <form className= "banner_formWorkerAccount" action="/logout" method="GET">
                         <button className="userButtonWorkerAccount">Wyloguj</button>
                     </form>
                 </div>

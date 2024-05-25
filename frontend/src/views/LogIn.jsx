@@ -1,3 +1,4 @@
+import {jwtDecode, InvalidTokenError } from 'jwt-decode';
 import React, { useState } from 'react';
 import '../css/LogIn.css';
 import logo from '../img/logo.png';
@@ -27,7 +28,14 @@ const LogIn = () => {
                 // Handle successful login
                 console.log('Login successful');
                 localStorage.setItem('jwt-token', responseData['token']);
-                navigate('/myAccount');
+                const decodedToken = jwtDecode(responseData['token']);
+                const userRoles = decodedToken.roles
+                if (userRoles.includes('ROLE_WORKER')) {
+                    navigate('/workerAccount')
+                }
+                else {
+                    navigate('/myAccount');
+                }
             } else {
                 // Handle login error
                 console.error('Login failed:', response.status);

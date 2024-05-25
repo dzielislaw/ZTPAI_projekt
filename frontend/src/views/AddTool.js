@@ -13,10 +13,10 @@ const AddTool = () => {
                     <h1>Sprzęt-apka</h1>
                 </div>
                 <div id="buttonArea">
-                    <form className="banner_form" action="/dashboard">
+                    <form className="banner_form" action="/workerAccount">
                         <button className="userButtonAddTool">Moje konto</button>
                     </form>
-                    <form className="banner_form" action="logout" method="GET">
+                    <form className="banner_form" action="/logout" method="GET">
                         <button className="userButtonAddTool">Wyloguj</button>
                     </form>
                 </div>

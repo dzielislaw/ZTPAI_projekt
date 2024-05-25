@@ -39,6 +39,8 @@ services:
       dockerfile: docker/php/Dockerfile
     volumes:
       - ./backend:/var/www/backend
+    ports:
+      - "9000:9000"
     networks:
       - pg-network
       - nginx

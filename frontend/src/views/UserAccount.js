@@ -33,6 +33,7 @@ const UserAccount = () => {
                 const response = await axios.get('http://127.0.0.1:80/api/categories'/*, config*/);
                 console.log(response);
                 const categories = response.data['hydra:member'];
+                categories.sort((a, b) => a.name.localeCompare(b.name));
                 setCategories(categories);
             } catch (e) {
                 console.log(e);
