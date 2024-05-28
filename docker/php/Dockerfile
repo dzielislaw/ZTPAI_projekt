@@ -52,6 +52,7 @@ RUN composer require api-platform/core
 RUN composer require api-platform/api-pack
 RUN composer require nelmio/cors-bundle
 RUN composer require symfony/amqp-messenger
+RUN composer require php-amqplib/php-amqplib
 
 COPY ./backend/. /var/www/backend
 
